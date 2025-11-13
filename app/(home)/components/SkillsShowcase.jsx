@@ -1,45 +1,72 @@
 'use client';
 
+
 import React from 'react';
 import { motion } from 'framer-motion';
+
+// --- ICON IMPORTS ---
+
+// From Font Awesome
+import { FaReact, FaNodeJs, FaGithub, FaAws, FaJava, FaPython, FaAngular, FaGitAlt } from "react-icons/fa";
+
+// From Simple Icons
+import { 
+    SiExpress, SiMongodb, SiTailwindcss, SiFigma, SiGreensock, 
+    SiThreedotjs, SiJavascript, SiMaterialdesign, SiTensorflow, SiPytorch, 
+    SiScikitlearn, SiJupyter, SiKeras, SiOpencv, SiDocker, SiMysql, 
+    SiPostgresql, SiRedis, SiApachekafka, SiTypescript, SiPandas, 
+    SiNumpy, SiApachespark, SiSpringboot, SiGooglecloud, SiMicrosoftazure 
+} from "react-icons/si";
+
+// From Tabler Icons
+import { TbBrandCpp, TbMessageChatbot } from "react-icons/tb";
+
+// From Game Icons
+import { GiBrain } from "react-icons/gi";
+
+// From Heroicons (already in your original code)
 import { HiCode } from 'react-icons/hi';
-import { FaReact, FaNodeJs, FaGithub, FaAws } from 'react-icons/fa';
-import { SiExpress, SiMongodb, SiTailwindcss, SiFigma, SiGreensock, SiThreedotjs, SiJavascript, SiMaterialdesign } from 'react-icons/si';
-import { TbBrandFramerMotion } from 'react-icons/tb';
-import { FaJava, FaPython } from 'react-icons/fa';
-import { SiTensorflow, SiPytorch, SiScikitlearn, SiJupyter, SiKeras, SiOpencv, SiDocker, SiMysql, SiPostgresql, SiRedis, SiApachekafka } from 'react-icons/si';
+
+
 
 
 const skills = [
-    { name: "Java", icon: <FaJava className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1" },
-    { name: "Python", icon: <FaPython className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1" },
-    { name: "AWS", icon: <FaAws className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1" },
- { name: "Node.js", icon: <FaNodeJs className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1" },
-    { name: "React.js", icon: <FaReact className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Express", icon: <SiExpress className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "MongoDB", icon: <SiMongodb className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 sm:row-span-2 row-span-1" },
-    { name: "GitHub", icon: <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Tailwind", icon: <SiTailwindcss className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "GSAP", icon: <SiGreensock className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Framer Motion", icon: <TbBrandFramerMotion className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Three.js", icon: <SiThreedotjs className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 md:col-span-2 row-span-1" },
-    { name: "Figma", icon: <SiFigma className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Material UI", icon: <SiMaterialdesign className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    // --- CORE & MOST PROMINENT SKILLS (Highlighted) ---
+    { name: "Python", icon: <FaPython className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-2 md:col-span-2 row-span-2" },
+    { name: "Java", icon: <FaJava className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 md:col-span-2 row-span-1" },
+    { name: "AWS", icon: <FaAws className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 row-span-1" },
+    { name: "JavaScript", icon: <SiJavascript className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "TypeScript", icon: <SiTypescript className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
 
+// --- SPECIALIZED & EMERGING TECH ---
+    { name: "LLMs", icon: <GiBrain className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" }, // Using a generic 'brain' icon for LLMs
+    { name: "LangChain", icon: <TbMessageChatbot className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "C++", icon: <TbBrandCpp className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
 
-    { name: "TensorFlow", icon: <SiTensorflow className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "PyTorch", icon: <SiPytorch className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Scikit-learn", icon: <SiScikitlearn className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Keras", icon: <SiKeras className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Jupyter", icon: <SiJupyter className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "OpenCV", icon: <SiOpencv className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    // --- DATA & AI ---
+    { name: "PyTorch", icon: <SiPytorch className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 row-span-1" },
+    { name: "TensorFlow", icon: <SiTensorflow className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 row-span-1" },
+    { name: "Scikit-learn", icon: <SiScikitlearn className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "Pandas", icon: <SiPandas className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "NumPy", icon: <SiNumpy className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    
+    // --- BIG DATA & DATABASES ---
+    { name: "Apache Spark", icon: <SiApachespark className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "MongoDB", icon: <SiMongodb className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "PostgreSQL", icon: <SiPostgresql className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "MySQL", icon: <SiMysql className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    
+    // --- WEB DEVELOPMENT & FRAMEWORKS ---
+    { name: "Node.js", icon: <FaNodeJs className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 row-span-1" },
+    { name: "React.js", icon: <FaReact className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "Spring Boot", icon: <SiSpringboot className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-2 sm:col-span-1 row-span-1" },
+    { name: "Angular", icon: <FaAngular className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
 
-    // More backend/data engineering skills
-    { name: "Docker", icon: <SiDocker className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "MySQL", icon: <SiMysql className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "PostgreSQL", icon: <SiPostgresql className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Redis", icon: <SiRedis className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
-    { name: "Apache Kafka", icon: <SiApachekafka className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    // --- TOOLS & DEVOPS ---
+    { name: "Docker", icon: <SiDocker className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "Git", icon: <FaGitAlt className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+    { name: "GCP", icon: <SiGooglecloud className="w-5 h-5 sm:w-6 sm:h-6" />, size: "col-span-1 row-span-1" },
+
 ];
 
 

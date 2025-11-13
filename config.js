@@ -3,7 +3,7 @@ import { HiCode, HiCube, HiDatabase, HiMail, HiBriefcase } from "react-icons/hi"
 
 export const config = {
     developer: {
-        name: "Rohith Chowdary Sadanala",
+        name: "Rohith Sadanala",
     },
     social: {
         github: "rohithsadanala",
@@ -16,16 +16,32 @@ export const config = {
     ],
     recentTracks: true, 
 
-    projects: [
-        {
-            id: 1, 
-            title: "Diagnosis of Melanoma from Dermoscopy Images",
-            description: "Developed and deployed deep learning models (CNNs) for classification of melanoma from dermoscopy images. This included advanced image preprocessing, feature extraction, and real-time prediction pipelines to achieve high diagnostic accuracy in medical imaging workflows.",
-            image: "/projects/melanoma-diagnosis.webp", 
-            technologies: ["Deep Learning", "CNN", "TensorFlow/PyTorch", "Python", "Image Processing", "Machine Learning"],
-            demo: "https://sifisheriessciences.com/index.php/journal/article/view/920/414"
-        }
-    ],
+projects: [
+    {
+        id: 1, 
+        title: "Diagnosis of Melanoma from Dermoscopy Images",
+        description: "Developed and deployed deep learning models (CNNs) for classification of melanoma from dermoscopy images. This included advanced image preprocessing and real-time prediction pipelines to achieve high diagnostic accuracy.",
+        image: "/project1.png",
+        technologies: ["Deep Learning", "CNN", "TensorFlow", "PyTorch", "Python", "Image Processing"],
+        demo: "https://sifisheriessciences.com/index.php/journal/article/view/920/414"
+    },
+    {
+        id: 2, 
+        title: "AI Integration for Radiology Automation",
+        description: "Integrated advanced deep learning models into a radiology platform to automate image analysis, volumetric measurements, and structured reporting. The system connects directly with PACS to enable real-time case prioritization, significantly improving radiologist efficiency.",
+        image: "/project2.png",
+        technologies: ["AI Agent Development", "LLM", "NLP", "TensorFlow", "PyTorch", "PACS Integration"],
+        demo: "https://newlantern.ai/"
+    },
+    {
+        id: 3, 
+        title: "AI-Powered Website Audit",
+        description: "Developed a scalable AI platform that leverages LLMs to audit websites, automatically extracting structured content and generating insightful PDF/PPT reports. The system features a Python/Flask backend, automated email delivery, and was deployed with robust CI/CD pipelines.",
+        image: "/project3.png",
+        technologies: ["Generative AI", "LLM Prompt Engineering", "Full-Stack Dev", "Python", "Flask", "CI/CD"],
+        demo: "https://www.instantinsites.com/"
+    }
+],
 
     skills: [
 
@@ -87,69 +103,61 @@ export const config = {
         }
     ],
 
-    experiences: [
-        {
-            position: "Software/Machine Learning Engineer",
-            company: "Devoir Software Solutions LLC",
-            period: "Feb 2025 – Present",
-            location: "Remote/Various",
-            description: "Architecting and deploying scalable machine learning pipelines, Gen AI, and RAG architectures in cloud environments.",
-            responsibilities: [
-                "Architected and deployed scalable ML pipelines utilizing object-oriented Python, **TensorFlow**, and **PyTorch** on AWS SageMaker and GCP Vertex AI, optimizing model performance.",
-                "Developed and fine-tuned large language models (LLMs) and Generative AI solutions using Hugging Face and LangChain.",
-                "Led cross-functional teams to implement computer vision workflows for real-time defect detection, leveraging Databricks and **Apache Spark**.",
-                "Automated model validation and CI using **Jenkins**, **Docker**, **Kubernetes**, and **Terraform** for robust production deployments.",
-                "Integrated monitoring, alerting, and logging stack (**Prometheus**, Grafana, ELK) for transparent, resilient ML system operations.",
-                "Developed test automation frameworks with **pytest** and **Jasmine**, ensuring consistent validation across **RESTful API** and UI layers."
-            ],
-            technologies: ["Python", "TensorFlow", "PyTorch", "AWS", "GCP", "Kubernetes", "Docker", "Jenkins", "Jasmine", "RESTful Web Services", "UNIX"]
-        },
-        {
-            position: "Technology Engir",
-            company: "Clean Choice Together",
-            period: "Aug 2024 – May 2025",
-            location: "Remote",
-            description: "Designed and implemented end-to-end data and ML workflows for predictive analytics and real-time insight delivery.",
-            responsibilities: [
-                "Built end-to-end ETL pipelines ingesting diverse datasets using PySpark, Airflow, and Delta Lake.",
-                "Designed ML workflows for predictive analytics and time series forecasting leveraging Scikit-learn and automated hyperparameter tuning.",
-                "Developed **RESTful APIs** and FastAPI microservices integrating trained models into web applications for real-time insight delivery.",
-                "Collaborated directly with enterprise clients to design, review, and deploy AI-driven web solutions.",
-                "Operationalized model monitoring and drift detection with MLflow Model Registry and Grafana dashboards."
-            ],
-            technologies: ["Python", "Apache Spark", "RESTful Web Services", "Javascript", "GCP", "AWS", "AJAX"]
-        },
-        {
-            position: "Student Technology Engineer",
-            company: "Aramark - University of South Florida",
-            period: "Jan 2024 – Nov 2024",
-            location: "Tampa, Florida",
-            description: "Conducted advanced research in NLP and Deep Learning, focusing on LLM pipelines and RAG architectures.",
-            responsibilities: [
-                "Conducted advanced research in **natural language processing (NLP)** and deep learning, publishing results in peer-reviewed journals.",
-                "Built end-to-end LLM pipelines with RAG, hybrid retrieval, reranking, and prompt templates for deterministic actions.",
-                "Engineered transformer-based models and reinforcement learning algorithms to solve open research problems.",
-                "Built reproducible ML benchmark frameworks using **PyTorch** and **TensorFlow**.",
-                "Mentored students in machine learning, statistics, and programming, fostering hands-on skills in data science and MLOps."
-            ],
-            technologies: ["PyTorch", "TensorFlow", "NLP", "Python", "Deep Learning"]
-        },
-        {
-            position: "Software Full Stack Developer",
-            company: "TechSophy",
-            period: "Jan 2021 – Jul 2023",
-            location: "India",
-            description: "Full stack development involving integration of ML models with web applications and cloud infrastructure management.",
-            responsibilities: [
-                "Developed web applications integrating machine learning models with Python (Flask), ReactJS, and SQL/NoSQL databases on AWS.",
-                "Implemented user-facing predictive analytics dashboards with real-time updates using **RESTful APIs**.",
-                "Established CI/CD pipelines for software and ML releases via **GitLab** (version control), **Jenkins**, and **Maven** with integration of automated testing suites.",
-                "Supported cloud infrastructure scaling and performance tuning using **Terraform** and **Prometheus**.",
-                "Followed Agile methodology, conducting code reviews and sprint meetings."
-            ],
-            technologies: ["React", "Python", "SQL", "RESTful Web Services", "Maven", "Jenkins", "Git", "AWS", "JQuery", "HTML5", "CSS3"]
-        }
-    ],
+experiences: [
+    {
+        position: "Software / Machine Learning Engineer",
+        company: "Devoir",
+        period: "Feb 2025 – Present",
+        location: "Remote",
+        description: "Leading the design and deployment of end-to-end Generative AI systems and scalable machine learning solutions in production cloud environments.",
+        responsibilities: [
+            "Engineered and deployed scalable MLOps pipelines on AWS and GCP, leveraging Python, TensorFlow, and PyTorch to automate model training, validation, and deployment.",
+            "Spearheaded the development of advanced Generative AI solutions, fine-tuning LLMs and building complex RAG (Retrieval-Augmented Generation) architectures with LangChain.",
+            "Automated the entire CI/CD lifecycle for machine learning models using Docker, Kubernetes, Jenkins, and Terraform, significantly reducing deployment time and errors.",
+            "Implemented real-time computer vision workflows on Databricks and Apache Spark for industrial defect detection, enhancing quality control processes."
+        ],
+        technologies: ["Python", "TensorFlow", "PyTorch", "AWS", "GCP", "Kubernetes", "Docker", "Apache Spark", "LangChain", "LLM"]
+    },
+    {
+        position: "Technology Volenteer",
+        company: "Clean Choice Together",
+        period: "Sep 2024 – May 2025", 
+        location: "Remote",
+        description: "Designed and implemented end-to-end data workflows to deliver predictive analytics and real-time insights for enterprise clients.",
+        responsibilities: [
+            "Designed and built robust ETL pipelines using PySpark and Airflow, processing diverse datasets to fuel machine learning models.",
+            "Developed and integrated predictive models for time-series forecasting, delivering key business insights via high-performance RESTful APIs built with FastAPI.",
+            "Managed the end-to-end lifecycle of client-facing AI solutions, from initial design and review to deployment and ongoing performance monitoring using MLflow."
+        ],
+        technologies: ["Python", "Apache Spark", "Scikit-learn", "FastAPI", "RESTful APIs", "GCP", "AWS", "MLflow"]
+    },
+    {
+        position: "Student Technology Developer",
+        company: "Aramark - University of South Florida",
+        period: "JSep 2023 – Nov 2024",
+        location: "Tampa, Florida",
+        description: "Conducted advanced research in NLP and Deep Learning, focusing on transformer-based models and LLM pipeline engineering.",
+        responsibilities: [
+            "Led advanced research in NLP, engineering end-to-end LLM pipelines with Retrieval-Augmented Generation (RAG) to solve complex research problems.",
+            "Developed and benchmarked novel transformer-based models using PyTorch and TensorFlow, creating reproducible frameworks for academic validation.",
+            "Mentored junior students in machine learning and data science principles, fostering practical skills in programming and MLOps."
+        ],
+        technologies: ["PyTorch", "TensorFlow", "NLP", "RAG", "Python", "Deep Learning", "LLM"]
+    },
+    {
+        position: "Full Stack Developer",
+        company: "TechSophy",
+        period: "Jan 2021 – Jul 2023",
+        location: "Hyderabad, India",
+        description: "Developed and maintained enterprise-grade web applications, focusing on integrating backend Java services with modern JavaScript frontends.",
+        responsibilities: [
+            "Engineered and delivered dynamic, data-driven features using Java (Spring Boot) for the backend and JavaScript (React) for responsive user interfaces.",
+            "Designed and consumed RESTful APIs to seamlessly integrate machine learning models and third-party services into the core application.",
+            "Managed the complete software lifecycle with CI/CD pipelines using Jenkins, GitLab, and Maven, ensuring robust and timely releases in an Agile environment."
+        ],
+        technologies: ["Java", "Spring Boot", "JavaScript", "React", "SQL", "RESTful APIs", "Maven", "Jenkins", "Git", "AWS"]
+    }
+],
 
     contactInfo: [
         {
