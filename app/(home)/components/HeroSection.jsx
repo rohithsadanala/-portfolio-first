@@ -73,7 +73,7 @@ const HeroSection = () => {
                 variants={textAnimation}
                 className="block text-primary mb-2"
               >
-                Hi, I'm {config.developer.name}
+                Hi, I'm Rohith Sadanala
               </motion.span>
               <motion.span
                 variants={textAnimation}
@@ -87,7 +87,7 @@ I build web that builds brands.              </motion.span>
             variants={itemAnimation}
             className="text-base sm:text-md text-muted-foreground leading-relaxed max-w-2xl mx-auto"
           >
-           Full-stack builder creating digital experiences that respect humans and scale with clarity. Accessibility is my north star.
+           Full-stack Developer crafting scalable web apps end to end with modern front and back-end.
           </motion.p>
 
           <motion.div
